@@ -1,0 +1,48 @@
+{
+  "name": "unreal",
+  "version": "2.0.0",
+  "description": "Unreal Engine 5.8 skills (Blueprints, C++ gameplay, Enhanced Input, Behavior Trees with EQS and StateTree, Niagara, packaging).",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "unreal",
+    "ue5"
+  ],
+  "skills": [
+    "./skills/unreal-blueprints",
+    "./skills/unreal-cpp-gameplay",
+    "./skills/unreal-enhanced-input",
+    "./skills/unreal-behavior-trees",
+    "./skills/unreal-niagara",
+    "./skills/unreal-packaging"
+  ],
+  "interface": {
+    "displayName": "Unreal Skills",
+    "shortDescription": "Unreal Engine 5.8 skills for agents",
+    "longDescription": "Unreal Engine 5.8 skills for Blueprints, C++ gameplay, Enhanced Input, Behavior Trees with EQS and StateTree, Niagara, and packaging.",
+    "developerName": "gamedev-skills",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+    "defaultPrompt": [
+      "Add Enhanced Input bindings for this Unreal character.",
+      "Implement this gameplay ability in Unreal C++ and Blueprints.",
+      "Set up a Niagara effect and package a shipping build."
+    ],
+    "brandColor": "#001850",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "ebitengine",
+  "version": "2.0.0",
+  "description": "Ebitengine v2.10.6 skill for 2D games in Go: input, rendering, text, audio, testing and builds.",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "ebitengine",
+    "golang"
+  ],
+  "skills": [
+    "./skills/ebitengine-game"
+  ],
+  "interface": {
+    "displayName": "Ebitengine Skills",
+    "shortDescription": "Ebitengine v2 2D Go game skills",
+    "longDescription": "Ebitengine v2.10.6 skill for 2D games in Go: input, rendering, text, audio, testing, and builds.",
+    "developerName": "gamedev-skills",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+    "defaultPrompt": [
+      "Scaffold an Ebitengine game loop with scenes and input.",
+      "Add audio and text rendering to this Ebitengine project.",
+      "Set up headless tests and a release build for this Go game."
+    ],
+    "brandColor": "#001850",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "genres",
+  "version": "2.0.0",
+  "description": "Compositional genre templates: platformer, roguelike, RPG, FPS, tower defense, card, visual novel, survival, puzzle.",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "genres",
+    "templates"
+  ],
+  "skills": [
+    "./skills/platformer",
+    "./skills/roguelike",
+    "./skills/rpg",
+    "./skills/fps-shooter",
+    "./skills/tower-defense",
+    "./skills/card-game",
+    "./skills/visual-novel",
+    "./skills/survival-crafting",
+    "./skills/puzzle"
+  ]
+}

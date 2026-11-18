@@ -1,0 +1,51 @@
+{
+  "name": "genres",
+  "version": "2.0.0",
+  "description": "Compositional genre templates: platformer, roguelike, RPG, FPS, tower defense, card, visual novel, survival, puzzle.",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "genres",
+    "templates"
+  ],
+  "skills": [
+    "./skills/platformer",
+    "./skills/roguelike",
+    "./skills/rpg",
+    "./skills/fps-shooter",
+    "./skills/tower-defense",
+    "./skills/card-game",
+    "./skills/visual-novel",
+    "./skills/survival-crafting",
+    "./skills/puzzle"
+  ],
+  "interface": {
+    "displayName": "Genre Template Skills",
+    "shortDescription": "Platformer, RPG, roguelike, and more",
+    "longDescription": "Compositional genre templates: platformer, roguelike, RPG, FPS, tower defense, card, visual novel, survival, and puzzle.",
+    "developerName": "gamedev-skills",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+    "defaultPrompt": [
+      "Apply the platformer skill to tune jumps and coyote time.",
+      "Scaffold RPG inventory and progression for this project.",
+      "Combine tower-defense wave curves with the right engine skill."
+    ],
+    "brandColor": "#001850",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  }
+}

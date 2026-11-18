@@ -315,6 +315,24 @@ def validate_markdown_links() -> list[str]:
     return errors
 
 
+def _plugin_source_path(plugin: dict) -> str:
+    """Return the local plugin root path from a marketplace plugin entry."""
+    source = plugin.get("source", "./")
+    if isinstance(source, dict):
+        return str(source.get("path") or "./")
+    return str(source or "./")
+
+
+def _resolve_plugin_skill(plugin_root: Path, skill_path: str) -> Path:
+    """Resolve a marketplace skill path relative to its plugin root."""
+    return (plugin_root / skill_path).resolve()
+
+
+def _canonical_skill_key(skill_dir: Path) -> str:
+    """Stable repo-relative key for a skill directory (follows symlinks)."""
+    return f"./{skill_dir.resolve().relative_to(REPO_ROOT.resolve()).as_posix()}"
+
+
 def validate_marketplace(files: list[Path]) -> list[str]:
     path = REPO_ROOT / ".claude-plugin" / "marketplace.json"
     try:
@@ -330,18 +348,88 @@ def validate_marketplace(files: list[Path]) -> list[str]:
     by_name: dict[str, set[str]] = {}
     for plugin in plugins:
         plugin_name = plugin.get("name", "<unnamed>")
-        if plugin.get("source") == "./" and plugin.get("strict") is not False:
-            errors.append(f"{_display(path)}: plugin {plugin_name!r} must set strict=false for explicit skill paths")
+        source = _plugin_source_path(plugin)
+        # Explicit skill lists under a shared or plugin root need strict=false so
+        # Claude Code does not also auto-discover every SKILL.md under that root.
+        if plugin.get("skills") and plugin.get("strict") is not False:
+            errors.append(
+                f"{_display(path)}: plugin {plugin_name!r} must set strict=false for explicit skill paths"
+            )
         skill_paths = plugin.get("skills", [])
         if len(skill_paths) != len(set(skill_paths)):
             errors.append(f"{_display(path)}: plugin {plugin_name!r} contains duplicate skill paths")
-        by_name[plugin_name] = set(skill_paths)
+        plugin_root = (REPO_ROOT / source).resolve()
+        if not plugin_root.is_dir():
+            errors.append(f"{_display(path)}: plugin {plugin_name!r} source {source!r} is missing")
+        resolved_keys: set[str] = set()
         for skill_path in skill_paths:
-            target = (REPO_ROOT / skill_path).resolve()
+            if not isinstance(skill_path, str) or not skill_path.startswith("./"):
+                errors.append(
+                    f"{_display(path)}: plugin {plugin_name!r} skill path must start with './': {skill_path!r}"
+                )
+                continue
+            target = _resolve_plugin_skill(plugin_root, skill_path)
             if not (target / "SKILL.md").is_file():
-                errors.append(f"{_display(path)}: plugin {plugin_name!r} points to missing skill {skill_path!r}")
+                errors.append(
+                    f"{_display(path)}: plugin {plugin_name!r} points to missing skill {skill_path!r}"
+                )
+                continue
+            try:
+                resolved_keys.add(_canonical_skill_key(target))
+            except ValueError:
+                errors.append(
+                    f"{_display(path)}: plugin {plugin_name!r} skill {skill_path!r} resolves outside the repo"
+                )
+        by_name[plugin_name] = resolved_keys
 
-    expected_all = {f"./{path.parent.relative_to(REPO_ROOT).as_posix()}" for path in files}
+        # Per-plugin Claude/Codex manifests, when present, must list the same skills.
+        for manifest_rel in (".claude-plugin/plugin.json", ".codex-plugin/plugin.json"):
+            manifest_path = plugin_root / manifest_rel
+            if not manifest_path.is_file():
+                continue
+            try:
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as exc:
+                errors.append(f"{_display(manifest_path)}: cannot load: {exc}")
+                continue
+            if manifest.get("name") != plugin_name:
+                errors.append(
+                    f"{_display(manifest_path)}: name {manifest.get('name')!r} must match plugin {plugin_name!r}"
+                )
+            manifest_skills = manifest.get("skills", [])
+            if isinstance(manifest_skills, str):
+                # Directory form (e.g. "./skills/") — ensure it exists; skill membership
+                # is still enforced via the marketplace list above.
+                skills_dir = (plugin_root / manifest_skills).resolve()
+                if not skills_dir.is_dir():
+                    errors.append(f"{_display(manifest_path)}: skills path {manifest_skills!r} is missing")
+                continue
+            if not isinstance(manifest_skills, list):
+                errors.append(f"{_display(manifest_path)}: 'skills' must be a list or directory string")
+                continue
+            manifest_keys: set[str] = set()
+            for skill_path in manifest_skills:
+                if not isinstance(skill_path, str) or not skill_path.startswith("./"):
+                    errors.append(
+                        f"{_display(manifest_path)}: skill path must start with './': {skill_path!r}"
+                    )
+                    continue
+                target = _resolve_plugin_skill(plugin_root, skill_path)
+                if not (target / "SKILL.md").is_file():
+                    errors.append(f"{_display(manifest_path)}: missing skill {skill_path!r}")
+                    continue
+                try:
+                    manifest_keys.add(_canonical_skill_key(target))
+                except ValueError:
+                    errors.append(
+                        f"{_display(manifest_path)}: skill {skill_path!r} resolves outside the repo"
+                    )
+            if manifest_keys != resolved_keys:
+                errors.append(
+                    f"{_display(manifest_path)}: skills do not match marketplace plugin {plugin_name!r}"
+                )
+
+    expected_all = {_canonical_skill_key(path.parent) for path in files}
     if by_name.get("gamedev") != expected_all:
         missing = sorted(expected_all - by_name.get("gamedev", set()))
         extra = sorted(by_name.get("gamedev", set()) - expected_all)
@@ -360,7 +448,7 @@ def validate_marketplace(files: list[Path]) -> list[str]:
     }
     for plugin_name, category in category_plugins.items():
         expected = {
-            f"./{skill.parent.relative_to(REPO_ROOT).as_posix()}"
+            _canonical_skill_key(skill.parent)
             for skill in files
             # Compare the path under the repo root, not the grandparent folder name:
             # router/SKILL.md's grandparent is the checkout folder itself, which may

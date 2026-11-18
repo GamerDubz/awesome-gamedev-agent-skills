@@ -1,0 +1,341 @@
+{
+  "name": "awesome-gamedev-agent-skills",
+  "interface": {
+    "displayName": "Awesome Game Dev Agent Skills"
+  },
+  "metadata": {
+    "description": "Cross-engine game-development Agent Skills, grouped by engine, discipline, genre, and workflow."
+  },
+  "owner": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "plugins": [
+    {
+      "name": "gamedev",
+      "source": {
+        "source": "local",
+        "path": "./plugins/gamedev"
+      },
+      "description": "Everything: the master router plus all 79 game-dev skills across every engine, discipline, genre, and workflow.",
+      "version": "2.0.0",
+      "author": {
+        "name": "gamedev-skills",
+        "url": "https://github.com/gamedev-skills"
+      },
+      "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "game-development",
+        "coding-agents",
+        "agent-skills",
+        "gamedev",
+        "router",
+        "multi-engine"
+      ],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "router",
+      "source": {
+        "source": "local",
+        "path": "./plugins/router"
+      },
+      "description": "Master router that detects the engine + task and loads the right skill(s).",
+      "version": "2.0.0",
+      "author": {
+        "name": "gamedev-skills",
+        "url": "https://github.com/gamedev-skills"
+      },
+      "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "game-development",
+        "coding-agents",
+        "agent-skills",
+        "gamedev",
+        "router",
+        "routing"
+      ],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "godot",
+      "source": {
+        "source": "local",
+        "path": "./plugins/godot"
+      },
+      "description": "Godot 4.7 engine skills (GDScript, C#, scenes, signals, 2D and 3D, physics, UI, shaders, multiplayer, export, headless tests).",
+      "version": "2.0.0",
+      "author": {
+        "name": "gamedev-skills",
+        "url": "https://github.com/gamedev-skills"
+      },
+      "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "game-development",
+        "coding-agents",
+        "agent-skills",
+        "gamedev",
+        "godot",
+        "gdscript"
+      ],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "unity",
+      "source": {
+        "source": "local",
+        "path": "./plugins/unity"
+      },
+      "description": "Unity 6.3 LTS engine skills (C#, Input System, 3D and 2D physics, animation, ScriptableObjects, tilemaps, NavMesh, builds).",
+      "version": "2.0.0",
+      "author": {
+        "name": "gamedev-skills",
+        "url": "https://github.com/gamedev-skills"
+      },
+      "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "game-development",
+        "coding-agents",
+        "agent-skills",
+        "gamedev",
+        "unity",
+        "csharp"
+      ],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "unreal",
+      "source": {
+        "source": "local",
+        "path": "./plugins/unreal"
+      },
+      "description": "Unreal Engine 5.8 skills (Blueprints, C++ gameplay, Enhanced Input, Behavior Trees with EQS and StateTree, Niagara, packaging).",
+      "version": "2.0.0",
+      "author": {
+        "name": "gamedev-skills",
+        "url": "https://github.com/gamedev-skills"
+      },
+      "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "game-development",
+        "coding-agents",
+        "agent-skills",
+        "gamedev",
+        "unreal",
+        "ue5"
+      ],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "ebitengine",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ebitengine"
+      },
+      "description": "Ebitengine v2.10.6 skill for 2D games in Go: input, rendering, text, audio, testing and builds.",
+      "version": "2.0.0",
+      "author": {
+        "name": "gamedev-skills",
+        "url": "https://github.com/gamedev-skills"
+      },
+      "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "game-development",
+        "coding-agents",
+        "agent-skills",
+        "gamedev",
+        "ebitengine",
+        "golang"
+      ],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "web-engines",
+      "source": {
+        "source": "local",
+        "path": "./plugins/web-engines"
+      },
+      "description": "Web game frameworks: Phaser 4.2, PixiJS 8.22, three.js r187.",
+      "version": "2.0.0",
+      "author": {
+        "name": "gamedev-skills",
+        "url": "https://github.com/gamedev-skills"
+      },
+      "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "game-development",
+        "coding-agents",
+        "agent-skills",
+        "gamedev",
+        "phaser",
+        "threejs",
+        "pixijs",
+        "web"
+      ],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "other-engines",
+      "source": {
+        "source": "local",
+        "path": "./plugins/other-engines"
+      },
+      "description": "Bevy 0.20, pygame-ce 2.5.8, L\u00d6VE 11.5, Defold 1.14.1, and Roblox skills (Luau, DataStores, UI, networking, characters, physics, Studio, simulator economy).",
+      "version": "2.0.0",
+      "author": {
+        "name": "gamedev-skills",
+        "url": "https://github.com/gamedev-skills"
+      },
+      "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "game-development",
+        "coding-agents",
+        "agent-skills",
+        "gamedev",
+        "bevy",
+        "roblox",
+        "defold",
+        "pygame",
+        "love2d"
+      ],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "disciplines",
+      "source": {
+        "source": "local",
+        "path": "./plugins/disciplines"
+      },
+      "description": "Cross-engine concepts: game art, AI and behavior trees, procedural generation, dialogue, saves, audio, shaders, physics tuning, level design, input, game feel, cameras, HUD and menus, performance.",
+      "version": "2.0.0",
+      "author": {
+        "name": "gamedev-skills",
+        "url": "https://github.com/gamedev-skills"
+      },
+      "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "game-development",
+        "coding-agents",
+        "agent-skills",
+        "gamedev",
+        "game-design",
+        "systems"
+      ],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "genres",
+      "source": {
+        "source": "local",
+        "path": "./plugins/genres"
+      },
+      "description": "Compositional genre templates: platformer, roguelike, RPG, FPS, tower defense, card, visual novel, survival, puzzle.",
+      "version": "2.0.0",
+      "author": {
+        "name": "gamedev-skills",
+        "url": "https://github.com/gamedev-skills"
+      },
+      "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "game-development",
+        "coding-agents",
+        "agent-skills",
+        "gamedev",
+        "genres",
+        "templates"
+      ],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "workflows",
+      "source": {
+        "source": "local",
+        "path": "./plugins/workflows"
+      },
+      "description": "Process and shipping skills: game jam, fast prototyping, Steam, itch.io, game design docs.",
+      "version": "2.0.0",
+      "author": {
+        "name": "gamedev-skills",
+        "url": "https://github.com/gamedev-skills"
+      },
+      "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "game-development",
+        "coding-agents",
+        "agent-skills",
+        "gamedev",
+        "shipping",
+        "steam",
+        "itch",
+        "game-jam"
+      ],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

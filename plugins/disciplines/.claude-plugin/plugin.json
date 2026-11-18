@@ -1,0 +1,37 @@
+{
+  "name": "disciplines",
+  "version": "2.0.0",
+  "description": "Cross-engine concepts: game art, AI and behavior trees, procedural generation, dialogue, saves, audio, shaders, physics tuning, level design, input, game feel, cameras, HUD and menus, performance.",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "game-design",
+    "systems"
+  ],
+  "skills": [
+    "./skills/create-game-assets",
+    "./skills/game-ai",
+    "./skills/procedural-gen",
+    "./skills/dialogue-systems",
+    "./skills/save-systems",
+    "./skills/audio-design",
+    "./skills/shader-programming",
+    "./skills/physics-tuning",
+    "./skills/level-design",
+    "./skills/input-systems",
+    "./skills/game-feel",
+    "./skills/game-ui-ux",
+    "./skills/camera-systems",
+    "./skills/performance-optimization",
+    "./skills/ai-behavior-trees-utility-ai"
+  ]
+}

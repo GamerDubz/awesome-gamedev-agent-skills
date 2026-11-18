@@ -1,0 +1,51 @@
+{
+  "name": "unity",
+  "version": "2.0.0",
+  "description": "Unity 6.3 LTS engine skills (C#, Input System, 3D and 2D physics, animation, ScriptableObjects, tilemaps, NavMesh, builds).",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "unity",
+    "csharp"
+  ],
+  "skills": [
+    "./skills/unity-csharp-scripting",
+    "./skills/unity-input-system",
+    "./skills/unity-physics",
+    "./skills/unity-animation",
+    "./skills/unity-scriptableobjects",
+    "./skills/unity-tilemap-2d",
+    "./skills/unity-navmesh",
+    "./skills/unity-build-pipeline",
+    "./skills/unity-build-size"
+  ],
+  "interface": {
+    "displayName": "Unity Skills",
+    "shortDescription": "Unity 6.3 LTS engine skills for agents",
+    "longDescription": "Unity 6.3 LTS skills for C# scripting, Input System, physics, animation, ScriptableObjects, tilemaps, NavMesh, and build pipelines.",
+    "developerName": "gamedev-skills",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+    "defaultPrompt": [
+      "Implement this Unity gameplay feature with modern C# patterns.",
+      "Wire Unity Input System actions for this player controller.",
+      "Shrink this Unity build and check the build report."
+    ],
+    "brandColor": "#001850",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  }
+}

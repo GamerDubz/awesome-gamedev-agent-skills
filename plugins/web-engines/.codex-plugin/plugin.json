@@ -1,0 +1,50 @@
+{
+  "name": "web-engines",
+  "version": "2.0.0",
+  "description": "Web game frameworks: Phaser 4.2, PixiJS 8.22, three.js r187.",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "phaser",
+    "threejs",
+    "pixijs",
+    "web"
+  ],
+  "skills": [
+    "./skills/phaser-core",
+    "./skills/phaser-arcade-physics",
+    "./skills/pixijs-rendering",
+    "./skills/threejs-scene-setup",
+    "./skills/threejs-gltf-loading",
+    "./skills/threejs-materials-lighting"
+  ],
+  "interface": {
+    "displayName": "Web Engine Skills",
+    "shortDescription": "Phaser, PixiJS, and three.js skills",
+    "longDescription": "Web game framework skills for Phaser 4.2, PixiJS 8.22, and three.js r187 covering core setup, physics, rendering, glTF, and materials.",
+    "developerName": "gamedev-skills",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+    "defaultPrompt": [
+      "Set up a Phaser scene with arcade physics for this game.",
+      "Load a glTF model into a three.js scene with lighting.",
+      "Optimize PixiJS rendering for this 2D web game."
+    ],
+    "brandColor": "#001850",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  }
+}

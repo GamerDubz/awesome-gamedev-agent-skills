@@ -1,0 +1,58 @@
+{
+  "name": "godot",
+  "version": "2.0.0",
+  "description": "Godot 4.7 engine skills (GDScript, C#, scenes, signals, 2D and 3D, physics, UI, shaders, multiplayer, export, headless tests).",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "godot",
+    "gdscript"
+  ],
+  "skills": [
+    "./skills/godot-gdscript",
+    "./skills/godot-nodes-scenes",
+    "./skills/godot-signals-groups",
+    "./skills/godot-2d-movement",
+    "./skills/godot-tilemap",
+    "./skills/godot-physics",
+    "./skills/godot-ui-control",
+    "./skills/godot-animation",
+    "./skills/godot-shaders",
+    "./skills/godot-3d-essentials",
+    "./skills/godot-resources",
+    "./skills/godot-audio",
+    "./skills/godot-multiplayer",
+    "./skills/godot-export",
+    "./skills/godot-csharp",
+    "./skills/godot-gdscript-headless-testing"
+  ],
+  "interface": {
+    "displayName": "Godot Skills",
+    "shortDescription": "Godot 4.7 engine skills for agents",
+    "longDescription": "Godot 4.7 engine skills covering GDScript, C#, scenes, signals, 2D and 3D, physics, UI, shaders, multiplayer, export, and headless tests.",
+    "developerName": "gamedev-skills",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+    "defaultPrompt": [
+      "Help me structure Godot scenes and signals for this feature.",
+      "Write typed GDScript for 2D player movement in Godot 4.",
+      "Set up Godot export presets and a headless smoke test."
+    ],
+    "brandColor": "#001850",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  }
+}

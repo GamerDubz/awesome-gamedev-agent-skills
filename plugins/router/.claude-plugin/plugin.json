@@ -1,0 +1,23 @@
+{
+  "name": "router",
+  "version": "2.0.0",
+  "description": "Master router that detects the engine + task and loads the right skill(s).",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "router",
+    "routing"
+  ],
+  "skills": [
+    "./skills/router"
+  ]
+}

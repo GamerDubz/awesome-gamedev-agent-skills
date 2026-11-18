@@ -93,20 +93,22 @@ later. The same `SKILL.md` files load
 natively in Claude Code, Cursor, Windsurf, Cline, Codex, Gemini CLI, GitHub Copilot, Kiro, and
 [dozens more](docs/COMPATIBILITY.md) — there's nothing to convert.
 
-**Claude Code plugin (alternative).** This repo is also a Claude Code plugin marketplace, so you
-can install it with Claude's own commands:
+**Plugin marketplaces (optional).** This repo is also an agent-agnostic plugin marketplace
+(`.agents/plugins/marketplace.json`, plus Claude and Codex plugin manifests). Examples:
 
 ```bash
+# Universal CLI (any agent)
+npx skills add gamedev-skills/awesome-gamedev-agent-skills
+
+# Claude Code
 claude plugin marketplace add gamedev-skills/awesome-gamedev-agent-skills
 claude plugin install gamedev@awesome-gamedev-agent-skills
+
+# Codex — add gamedev-skills/awesome-gamedev-agent-skills as a marketplace, then enable gamedev@awesome-gamedev-agent-skills
 ```
 
-Building in only one engine? Install a smaller bundle — `router` plus your engine:
-
-```bash
-claude plugin install router@awesome-gamedev-agent-skills
-claude plugin install godot@awesome-gamedev-agent-skills    # or: unity · unreal · ebitengine · web-engines · other-engines
-```
+Building in only one engine? Install a smaller bundle — `router` plus your engine
+(`godot`, `unity`, `unreal`, `ebitengine`, `web-engines`, or `other-engines`).
 
 **Install tip.** If your agent already has many skills, install the router and your engine's
 bundle instead of everything. Agents list every skill's description within a size limit, and

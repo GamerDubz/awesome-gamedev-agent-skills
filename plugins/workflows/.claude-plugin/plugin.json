@@ -1,0 +1,29 @@
+{
+  "name": "workflows",
+  "version": "2.0.0",
+  "description": "Process and shipping skills: game jam, fast prototyping, Steam, itch.io, game design docs.",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "shipping",
+    "steam",
+    "itch",
+    "game-jam"
+  ],
+  "skills": [
+    "./skills/game-jam",
+    "./skills/prototype-fast",
+    "./skills/steam-publish",
+    "./skills/itch-publish",
+    "./skills/game-docs"
+  ]
+}

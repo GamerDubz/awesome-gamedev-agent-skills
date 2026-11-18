@@ -1,0 +1,31 @@
+{
+  "name": "unity",
+  "version": "2.0.0",
+  "description": "Unity 6.3 LTS engine skills (C#, Input System, 3D and 2D physics, animation, ScriptableObjects, tilemaps, NavMesh, builds).",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "unity",
+    "csharp"
+  ],
+  "skills": [
+    "./skills/unity-csharp-scripting",
+    "./skills/unity-input-system",
+    "./skills/unity-physics",
+    "./skills/unity-animation",
+    "./skills/unity-scriptableobjects",
+    "./skills/unity-tilemap-2d",
+    "./skills/unity-navmesh",
+    "./skills/unity-build-pipeline",
+    "./skills/unity-build-size"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "router",
+  "version": "2.0.0",
+  "description": "Master router that detects the engine + task and loads the right skill(s).",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "router",
+    "routing"
+  ],
+  "skills": [
+    "./skills/router"
+  ],
+  "interface": {
+    "displayName": "Game Dev Router",
+    "shortDescription": "Detect engine and load the right skill(s)",
+    "longDescription": "Master router that detects the game engine and task, then loads the smallest useful set of focused skills from the catalog.",
+    "developerName": "gamedev-skills",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Interactive"
+    ],
+    "websiteURL": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+    "defaultPrompt": [
+      "Use the router to pick skills for this game-development task.",
+      "Detect which engine this project uses and recommend skills.",
+      "Choose the smallest skill set for adding a save system."
+    ],
+    "brandColor": "#001850",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  }
+}

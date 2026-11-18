@@ -1,0 +1,57 @@
+{
+  "name": "other-engines",
+  "version": "2.0.0",
+  "description": "Bevy 0.20, pygame-ce 2.5.8, L\u00d6VE 11.5, Defold 1.14.1, and Roblox skills (Luau, DataStores, UI, networking, characters, physics, Studio, simulator economy).",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "bevy",
+    "roblox",
+    "defold",
+    "pygame",
+    "love2d"
+  ],
+  "skills": [
+    "./skills/bevy-ecs",
+    "./skills/pygame-core",
+    "./skills/love2d-core",
+    "./skills/defold-core",
+    "./skills/roblox-luau",
+    "./skills/roblox-datastores",
+    "./skills/roblox-ui",
+    "./skills/roblox-networking",
+    "./skills/roblox-characters",
+    "./skills/roblox-physics",
+    "./skills/roblox-studio-workflow",
+    "./skills/roblox-simulator-economy"
+  ],
+  "interface": {
+    "displayName": "Other Engine Skills",
+    "shortDescription": "Bevy, pygame, L\u00d6VE, Defold, Roblox skills",
+    "longDescription": "Skills for Bevy, pygame-ce, L\u00d6VE, Defold, and Roblox (Luau, DataStores, UI, networking, characters, physics, Studio, simulator economy).",
+    "developerName": "gamedev-skills",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+    "defaultPrompt": [
+      "Implement this feature in the detected engine (Bevy, pygame, L\u00d6VE, Defold, or Roblox).",
+      "Set up Roblox DataStores and networking for this experience.",
+      "Add ECS systems for this Bevy gameplay feature."
+    ],
+    "brandColor": "#001850",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  }
+}

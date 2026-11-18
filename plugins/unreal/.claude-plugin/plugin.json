@@ -1,0 +1,28 @@
+{
+  "name": "unreal",
+  "version": "2.0.0",
+  "description": "Unreal Engine 5.8 skills (Blueprints, C++ gameplay, Enhanced Input, Behavior Trees with EQS and StateTree, Niagara, packaging).",
+  "author": {
+    "name": "gamedev-skills",
+    "url": "https://github.com/gamedev-skills"
+  },
+  "homepage": "https://gamedev-skills.github.io/awesome-gamedev-agent-skills/",
+  "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "game-development",
+    "coding-agents",
+    "agent-skills",
+    "gamedev",
+    "unreal",
+    "ue5"
+  ],
+  "skills": [
+    "./skills/unreal-blueprints",
+    "./skills/unreal-cpp-gameplay",
+    "./skills/unreal-enhanced-input",
+    "./skills/unreal-behavior-trees",
+    "./skills/unreal-niagara",
+    "./skills/unreal-packaging"
+  ]
+}
